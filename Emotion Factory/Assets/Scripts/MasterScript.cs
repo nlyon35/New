@@ -76,4 +76,24 @@ public class MasterScript : MonoBehaviour {
     	//nViews[0].viewID = 2;
 
 	}
+
+	public void ScaredCorrectButton () {
+
+
+	//MasterScript.changeViewOfCurrentPlayerScaredCorrect1a();
+	//MasterScript.photonView.rpc("changeViewOfOtherPlayerScaredCorrect1b", PhotonTargets.Others);
+	
+	//this.GetComponent<MasterScript>().changeViewOfCurrentPlayerScaredCorrect1a();
+	changeViewOfCurrentPlayerScaredCorrect1a();
+	Debug.Log("dalalala");
+
+	PhotonView photonView = GameObject.Find("Scripts").GetComponent<PhotonView>();
+	photonView.RPC("changeViewOfOtherPlayerScaredCorrect1b()", PhotonTargets.Others);
+
+	//photonView.RPC("g.GetComponent<MasterScript>changeViewOfOtherPlayerScaredCorrect1b()", PhotonTargets.Others);
+
+	//g.GetComponent<MasterScript>().changeViewOfOtherPlayerScaredCorrect1b();
+	
+	}
+
 }
